@@ -1,0 +1,162 @@
+|testHamming
+O0 <= CorrectCode:inst1.O0
+I0 => GMatrix:inst.C0
+I1 => GMatrix:inst.C1
+I2 => GMatrix:inst.C2
+I3 => GMatrix:inst.C3
+Error0 => inst2.IN1
+Error1 => inst3.IN0
+Error2 => inst4.IN1
+Error3 => inst5.IN1
+Error4 => inst6.IN1
+Error5 => inst7.IN1
+Error6 => inst8.IN1
+O1 <= CorrectCode:inst1.O1
+O2 <= CorrectCode:inst1.O2
+O3 <= CorrectCode:inst1.O3
+O4 <= CorrectCode:inst1.O4
+O5 <= CorrectCode:inst1.O5
+O6 <= CorrectCode:inst1.O6
+
+
+|testHamming|CorrectCode:inst1
+O0 <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+I0 => syndrome:inst.I0
+I0 => inst3.IN1
+I1 => syndrome:inst.I1
+I1 => inst4.IN1
+I2 => syndrome:inst.I2
+I2 => inst5.IN1
+I3 => syndrome:inst.I3
+I3 => inst6.IN1
+I4 => syndrome:inst.I4
+I4 => inst7.IN1
+I5 => syndrome:inst.I5
+I5 => inst8.IN1
+I6 => syndrome:inst.I6
+I6 => inst9.IN1
+O1 <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+O2 <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+O3 <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+O4 <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+O5 <= inst8.DB_MAX_OUTPUT_PORT_TYPE
+O6 <= inst9.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|testHamming|CorrectCode:inst1|Coset:inst2
+syndrome[0] => Mux0.IN10
+syndrome[0] => Mux1.IN10
+syndrome[0] => Mux2.IN10
+syndrome[0] => Mux3.IN10
+syndrome[0] => Mux4.IN10
+syndrome[0] => Mux5.IN10
+syndrome[0] => Mux6.IN10
+syndrome[1] => Mux0.IN9
+syndrome[1] => Mux1.IN9
+syndrome[1] => Mux2.IN9
+syndrome[1] => Mux3.IN9
+syndrome[1] => Mux4.IN9
+syndrome[1] => Mux5.IN9
+syndrome[1] => Mux6.IN9
+syndrome[2] => Mux0.IN8
+syndrome[2] => Mux1.IN8
+syndrome[2] => Mux2.IN8
+syndrome[2] => Mux3.IN8
+syndrome[2] => Mux4.IN8
+syndrome[2] => Mux5.IN8
+syndrome[2] => Mux6.IN8
+CL[0] <= Mux6.DB_MAX_OUTPUT_PORT_TYPE
+CL[1] <= Mux5.DB_MAX_OUTPUT_PORT_TYPE
+CL[2] <= Mux4.DB_MAX_OUTPUT_PORT_TYPE
+CL[3] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+CL[4] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+CL[5] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+CL[6] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|testHamming|CorrectCode:inst1|syndrome:inst
+O0 <= XOR4:inst.OUT
+I5 => XOR4:inst.IN3
+I5 => XOR4:inst1.IN3
+I6 => XOR4:inst.IN4
+I6 => XOR4:inst1.IN4
+I6 => XOR4:inst2.IN4
+I4 => XOR4:inst.IN2
+I4 => XOR4:inst2.IN3
+I3 => XOR4:inst.IN1
+O1 <= XOR4:inst1.OUT
+I2 => XOR4:inst1.IN2
+I2 => XOR4:inst2.IN2
+I1 => XOR4:inst1.IN1
+O2 <= XOR4:inst2.OUT
+I0 => XOR4:inst2.IN1
+
+
+|testHamming|CorrectCode:inst1|syndrome:inst|XOR4:inst
+OUT <= 3.DB_MAX_OUTPUT_PORT_TYPE
+IN1 => 13.IN0
+IN2 => 13.IN1
+IN3 => 16.IN0
+IN4 => 16.IN1
+
+
+|testHamming|CorrectCode:inst1|syndrome:inst|XOR4:inst1
+OUT <= 3.DB_MAX_OUTPUT_PORT_TYPE
+IN1 => 13.IN0
+IN2 => 13.IN1
+IN3 => 16.IN0
+IN4 => 16.IN1
+
+
+|testHamming|CorrectCode:inst1|syndrome:inst|XOR4:inst2
+OUT <= 3.DB_MAX_OUTPUT_PORT_TYPE
+IN1 => 13.IN0
+IN2 => 13.IN1
+IN3 => 16.IN0
+IN4 => 16.IN1
+
+
+|testHamming|GMatrix:inst
+O0 <= C0.DB_MAX_OUTPUT_PORT_TYPE
+C0 => O0.DATAIN
+C0 => XOR3:inst1.IN1
+C0 => XOR3:inst2.IN1
+O1 <= C1.DB_MAX_OUTPUT_PORT_TYPE
+C1 => O1.DATAIN
+C1 => XOR3:inst.IN1
+C1 => XOR3:inst2.IN2
+O2 <= C2.DB_MAX_OUTPUT_PORT_TYPE
+C2 => O2.DATAIN
+C2 => XOR3:inst.IN2
+C2 => XOR3:inst1.IN2
+O3 <= C3.DB_MAX_OUTPUT_PORT_TYPE
+C3 => O3.DATAIN
+C3 => XOR3:inst.IN3
+C3 => XOR3:inst1.IN3
+C3 => XOR3:inst2.IN3
+O4 <= XOR3:inst.OUT
+O5 <= XOR3:inst1.OUT
+O6 <= XOR3:inst2.OUT
+
+
+|testHamming|GMatrix:inst|XOR3:inst
+OUT <= 1.DB_MAX_OUTPUT_PORT_TYPE
+IN1 => 1.IN0
+IN2 => 3.IN0
+IN3 => 3.IN1
+
+
+|testHamming|GMatrix:inst|XOR3:inst1
+OUT <= 1.DB_MAX_OUTPUT_PORT_TYPE
+IN1 => 1.IN0
+IN2 => 3.IN0
+IN3 => 3.IN1
+
+
+|testHamming|GMatrix:inst|XOR3:inst2
+OUT <= 1.DB_MAX_OUTPUT_PORT_TYPE
+IN1 => 1.IN0
+IN2 => 3.IN0
+IN3 => 3.IN1
+
+

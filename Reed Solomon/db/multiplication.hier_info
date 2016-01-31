@@ -1,0 +1,72 @@
+|test1
+ans0 <= ans:inst1.ans0
+clk => Mult:inst.clk
+clk => ans:inst1.clk
+INbit => Mult:inst.A
+ans4 <= ans:inst1.ans4
+ans5 <= ans:inst1.ans5
+ans6 <= ans:inst1.ans6
+ans3 <= ans:inst1.ans3
+ans1 <= ans:inst1.ans1
+ans2 <= ans:inst1.ans2
+ans7 <= ans:inst1.ans7
+ans14 <= ans:inst1.ans14
+ans8 <= ans:inst1.ans8
+ans10 <= ans:inst1.ans10
+ans9 <= ans:inst1.ans9
+ans11 <= ans:inst1.ans11
+ans12 <= ans:inst1.ans12
+ans13 <= ans:inst1.ans13
+
+
+|test1|ans:inst1
+ans0 <= inst.DB_MAX_OUTPUT_PORT_TYPE
+clk => inst.CLK
+clk => inst1.CLK
+clk => inst2.CLK
+clk => inst3.CLK
+clk => inst4.CLK
+clk => inst5.CLK
+clk => inst6.CLK
+clk => inst7.CLK
+clk => inst8.CLK
+clk => inst9.CLK
+clk => inst10.CLK
+clk => inst11.CLK
+clk => inst12.CLK
+clk => inst13.CLK
+clk => inst14.CLK
+INbit => inst.DATAIN
+ans1 <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+ans2 <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+ans3 <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+ans4 <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+ans5 <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+ans6 <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+ans7 <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+ans8 <= inst8.DB_MAX_OUTPUT_PORT_TYPE
+ans9 <= inst9.DB_MAX_OUTPUT_PORT_TYPE
+ans10 <= inst10.DB_MAX_OUTPUT_PORT_TYPE
+ans11 <= inst11.DB_MAX_OUTPUT_PORT_TYPE
+ans12 <= inst12.DB_MAX_OUTPUT_PORT_TYPE
+ans13 <= inst13.DB_MAX_OUTPUT_PORT_TYPE
+ans14 <= inst14.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|test1|Mult:inst
+Q <= inst15.DB_MAX_OUTPUT_PORT_TYPE
+clk => inst11.CLK
+clk => inst10.CLK
+clk => inst9.CLK
+clk => inst8.CLK
+clk => inst7.CLK
+clk => inst6.CLK
+clk => inst5.CLK
+clk => inst.CLK
+A => inst.DATAIN
+A => inst12.IN1
+A => inst13.IN1
+A => inst14.IN1
+A => inst15.IN1
+
+
